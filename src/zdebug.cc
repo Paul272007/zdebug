@@ -1,8 +1,9 @@
-#include "zdebug.hh"
 #include <iostream>
 #include <math.h>
 #include <pthread.h>
 #include <thread>
+
+#include "zdebug.hh"
 
 namespace zdebug
 {
@@ -35,5 +36,10 @@ void run_in_background(void (*func)())
 {
   std::thread t(func);
   t.detach();
+}
+
+void display_version()
+{
+  info("v1.1.0");
 }
 } // namespace zdebug

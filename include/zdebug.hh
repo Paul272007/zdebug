@@ -11,4 +11,6 @@ void error(const std::string &msg);
 double benchmark_math(double iterations);
 
 void run_in_background(void (*func)());
+
+void display_version();
 } // namespace zdebug
